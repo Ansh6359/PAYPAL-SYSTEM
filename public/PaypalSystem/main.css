@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+  background: #ffffff; /* Light blue-grey */
+  color: #003087; /* PayPal primary text color */
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003087; /* Darker PayPal Blue */
+}
+
+ul {
+  margin: 0;
+}
+
+/* Navbar */
+.bg-steel {
+  background-color: #0070ba; /* PayPal bright blue */
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #d2e5f2; /* Light blue for contrast */
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+/* Content Sections */
+.content-section {
+  background: #ffffff; /* White */
+  padding: 10px 20px;
+  border: 1px solid #dde7f0; /* Soft blue-grey border */
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+/* Article Styles */
+.article-title {
+  color: #00457c; /* Medium PayPal blue */
+}
+
+a.article-title:hover {
+  color: #0070ba; /* Bright PayPal blue */
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Icons and Images */
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+/* Account Heading */
+.account-heading {
+  font-size: 2.5rem;
+  color: #003087; /* PayPal dark blue */
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0070ba; /* PayPal bright blue */
+  border-color: #0070ba;
+}
+
+.btn-primary:hover {
+  background-color: #005ea6; /* Darker blue on hover */
+  border-color: #005ea6;
+}
+
+.btn-success {
+  background-color: #009cde; /* PayPal cyan */
+  border-color: #009cde;
+}
+
+.btn-success:hover {
+  background-color: #0070ba; /* Switch to bright blue on hover */
+  border-color: #0070ba;
+}

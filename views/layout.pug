@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description" content="PayPal System - Manage your funds, send and receive money securely.")
+    meta(name="author" content="Your Name")
+    link(rel="icon" href="/PaypalSystem/images/favicon.ico" type="image/x-icon")
+    
+    // Bootstrap CSS
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    link(rel="stylesheet" href="/PaypalSystem/main.css")
+    
+    if title
+      title PayPal System - #{title}
+    else
+      title PayPal System
+
+  body
+    header.site-header
+      nav.navbar.navbar-expand-md.navbar-dark.bg-steel.fixed-top
+        .container
+          a.navbar-brand.mr-4(href="/") PayPal System
+          button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarToggle", aria-controls="navbarToggle", aria-expanded="false", aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          .collapse.navbar-collapse(id="navbarToggle")
+            .navbar-nav.mr-auto
+              a.nav-item.nav-link(href="/transactions") Transaction History
+            .navbar-nav
+              if user
+                a.nav-item.nav-link(href="/users/logout") Logout
+              else
+                a.nav-item.nav-link(href="/users/login") Login
+                a.nav-item.nav-link(href="/users/register") Register
+
+    main(role="main" class="container mt-5")
+      .row
+        .col-md-8
+          block content
+
+        .col-md-4
+          .content-section
+            h3 About PayPal System
+            p With PayPal System, you can securely manage your funds, send and receive money with ease.
+            ul.list-group
+              li.list-group-item.list-group-item-light Secure Transactions
+              li.list-group-item.list-group-item-light Easy-to-use Interface
+              li.list-group-item.list-group-item-light Real-Time Wallet Updates
+              li.list-group-item.list-group-item-light 24/7 Support
+            p.text-muted For more details, visit the
+              a(href="https://www.paypal.com", target="_blank") PayPal official website.
+
+    // Bootstrap JS and dependencies
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")

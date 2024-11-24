@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .transactions
+    h1 Transaction History
+
+    // Sent Transactions
+    h3 Sent Transactions
+    if sent_transactions.length > 0
+      table.table.table-bordered
+        thead
+          tr
+            th Recipient Email
+            th Amount
+            th Timestamp
+            th Status
+        tbody
+          each transaction in sent_transactions
+            tr
+              td= transaction.recipientId ? transaction.recipientId.email : 'N/A'
+              td= "$" + transaction.amount
+              td= transaction.transactionDate
+              td= transaction.status
+    else
+      p You have not sent any money yet.
+
+    // Received Transactions
+    h3 Received Transactions
+    if received_transactions.length > 0
+      table.table.table-bordered
+        thead
+          tr
+            th Sender Email
+            th Amount
+            th Timestamp
+            th Status
+        tbody
+          each transaction in received_transactions
+            tr
+              td= transaction.senderId ? transaction.senderId.email : 'N/A'
+              td= "$" + transaction.amount
+              td= transaction.transactionDate
+              td= transaction.status
+    else
+      p You have not received any money yet.

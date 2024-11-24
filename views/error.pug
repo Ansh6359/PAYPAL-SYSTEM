@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Error Occurred
+  p An error occurred while processing your request.
+
+
+
+app.use(function (err, req, res, next) {
+  console.log(err); // Log error details to check
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.status(err.status || 500);
+  res.render('error');
+});
